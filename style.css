@@ -1,8 +1,11 @@
+/* Réinitialiser les styles par défaut pour tous les éléments */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+/* Styles du body : centrer le contenu en grille */
 body {
   display: grid;
   justify-content: center;
@@ -10,6 +13,8 @@ body {
   background-color: white;
   font-family: "Quicksand", sans-serif;
 }
+
+/* Styles généraux des conteneurs : positionner au centre de l'écran */
 .container {
   position: absolute;
   top: 50%;
@@ -22,12 +27,15 @@ body {
   transition: 0.2s;
 }
 
+/* Conteneur de la question : positionné un peu plus haut */
 .question-container {
   position: absolute;
   top: 40%;
   left: 50%;
   transition: 0.2s;
 }
+
+/* Image/vidéo locale : taille et espacement */
 .local-gif {
   width: 100%;
   max-width: 300px;
@@ -36,15 +44,21 @@ body {
   margin: 0 auto 3rem auto;
   pointer-events: none;
 }
+
+/* Texte de la question : grande taille */
 .question {
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
+
+/* Conteneur des boutons : flexbox pour l'alignement */
 .button-container {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
+
+/* Styles généraux des boutons */
 .btn {
   position: absolute;
   border: none;
@@ -57,9 +71,10 @@ body {
   background-color: #ff54a4;
   color: white;
   transform: scale(1.05);
-  box-shadow: 0px 4px 15px
-   rgba(255, 107, 129, 0.5);
+  box-shadow: 0px 4px 15px rgba(255, 107, 129, 0.5);
 }
+
+/* Effet au survol des boutons : changement de couleur et d'échelle */
 .btn:hover {
   background-color: #ffa4b1;
   transform: scale(1.1);
@@ -67,13 +82,17 @@ body {
   text-shadow: 1px 1px 5px rgba(255, 182, 193, 0.8);
 }
 
+/* Positionnement du bouton "Oui" : à droite */
 .yes-btn {
   right: 54%;
 }
+
+/* Positionnement du bouton "Non" : à gauche (peut se déplacer) */
 .no-btn {
   left: 54%;
 }
 
+/* Conteneur des résultats : caché par défaut */
 .result-container {
   display: none;
   position: absolute;
@@ -86,16 +105,24 @@ body {
   -moz-transform: translate(-100%, -50%);
   transition: 0.2s;
 }
+
+/* Vidéo de résultat : arrondie avec marge */
 .gif-result {
   border-radius: 10px;
   margin-bottom: 2rem;
 }
+
+/* Titre du conteneur de résultat : grande taille et centré */
 .result-container h2 {
   font-size: 3.2rem;
   text-align: center;
 }
 
-/* heart loader */
+/* ============================================ */
+/* ANIMATIONS DU LOADER DE CŒUR               */
+/* ============================================ */
+
+/* Conteneur principal du loader : caché par défaut */
 .cssload-main {
   display: none;
   position: absolute;
@@ -110,26 +137,25 @@ body {
   -moz-transform: translate(-100%, -240%);
 }
 
+/* Taille de la police pour les éléments du loader */
 .cssload-main * {
   font-size: 62px;
 }
 
+/* Animation du cœur principal : rotation continue */
 .cssload-heart {
   animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-  -o-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -ms-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -webkit-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -moz-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
+  -o-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -ms-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -webkit-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -moz-animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
   top: 50%;
   content: "";
   left: 50%;
   position: absolute;
 }
 
+/* Partie gauche du cœur : cercle rouge qui pulse */
 .cssload-heartL {
   width: 1em;
   height: 1em;
@@ -140,14 +166,10 @@ body {
   display: block;
   border-radius: 100%;
   animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-  -o-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -ms-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -webkit-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -moz-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
+  -o-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -ms-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -webkit-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -moz-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
   transform: translate(-28px, -27px);
   -o-transform: translate(-28px, -27px);
   -ms-transform: translate(-28px, -27px);
@@ -155,6 +177,7 @@ body {
   -moz-transform: translate(-28px, -27px);
 }
 
+/* Partie droite du cœur : cercle rouge qui pulse */
 .cssload-heartR {
   width: 1em;
   height: 1em;
@@ -170,16 +193,13 @@ body {
   -webkit-transform: translate(28px, -27px);
   -moz-transform: translate(28px, -27px);
   animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-  -o-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -ms-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -webkit-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -moz-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
+  -o-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -ms-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -webkit-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -moz-animation: cssload-heartR 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
 }
 
+/* Élément central en forme de carré : scintille avec le cœur */
 .cssload-square {
   width: 1em;
   height: 1em;
@@ -194,16 +214,13 @@ body {
   -webkit-transform: scale(1) rotate(-45deg);
   -moz-transform: scale(1) rotate(-45deg);
   animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-  -o-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -ms-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -webkit-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -moz-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
+  -o-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -ms-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -webkit-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -moz-animation: cssload-square 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
 }
 
+/* Ombre du loader : pulse avec l'animation */
 .cssload-shadow {
   top: 97px;
   left: 50%;
@@ -217,16 +234,17 @@ body {
   border: 1px solid rgb(215, 215, 215);
   border-radius: 50%;
   animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-  -o-animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -ms-animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -webkit-animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
-  -moz-animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
-    normal;
+  -o-animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -ms-animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -webkit-animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+  -moz-animation: cssload-shadow 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
 }
 
+/* ============================================ */
+/* KEYFRAMES DES ANIMATIONS                   */
+/* ============================================ */
+
+/* Animation du carré : rétrécit à 50% puis revient à la taille normale */
 @keyframes cssload-square {
   50% {
     border-radius: 100%;
@@ -277,6 +295,7 @@ body {
   }
 }
 
+/* Animation du cœur : rotation complète (720 degrés) */
 @keyframes cssload-heart {
   50% {
     transform: rotate(360deg);
@@ -322,6 +341,7 @@ body {
   }
 }
 
+/* Animation du cœur gauche : rétrécit à 60% */
 @keyframes cssload-heartL {
   60% {
     transform: scale(0.4);
@@ -352,6 +372,7 @@ body {
   }
 }
 
+/* Animation du cœur droit : rétrécit à 40% */
 @keyframes cssload-heartR {
   40% {
     transform: scale(0.4);
@@ -382,6 +403,7 @@ body {
   }
 }
 
+/* Animation de l'ombre : rétrécit à 50% et change de couleur */
 @keyframes cssload-shadow {
   50% {
     transform: scale(0.5);
@@ -414,5 +436,153 @@ body {
   50% {
     -moz-transform: scale(0.5);
     border-color: rgb(228, 228, 228);
+  }
+}
+
+/* ============================================ */
+/* RESPONSIVITÉ - APPAREILS MOBILES            */
+/* ============================================ */
+
+/* Tablettes et petits écrans (768px et moins) */
+@media (max-width: 768px) {
+  /* Ajuster la taille de la question */
+  .question {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Réduire la taille de la vidéo locale */
+  .local-gif {
+    max-width: 250px;
+    margin: 0 auto 2rem auto;
+  }
+
+  /* Ajuster l'espacement des boutons */
+  .button-container {
+    gap: 1rem;
+  }
+
+  /* Réduire la taille et le padding des boutons */
+  .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Ajuster le texte du résultat */
+  .result-container h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Réduire la taille de la vidéo résultat */
+  .gif-result {
+    max-width: 250px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Réduire la taille du loader */
+  .cssload-main * {
+    font-size: 48px;
+  }
+}
+
+/* Téléphones (480px et moins) */
+@media (max-width: 480px) {
+  /* Corps : hauteur minimale pour les petits écrans */
+  body {
+    min-height: 100vh;
+    min-height: 100dvh; /* Hauteur viewport dynamique pour mobile */
+  }
+
+  /* Réduire davantage la taille de la question */
+  .question {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+  }
+
+  /* Vidéo locale encore plus petite */
+  .local-gif {
+    max-width: 200px;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  /* Ajuster l'espacement des boutons */
+  .button-container {
+    gap: 0.8rem;
+  }
+
+  /* Boutons plus petits */
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 25px;
+  }
+
+  /* Ajuster les positions des boutons */
+  .yes-btn {
+    right: 52%;
+  }
+
+  .no-btn {
+    left: 52%;
+  }
+
+  /* Texte du résultat plus petit */
+  .result-container h2 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+
+  /* Vidéo résultat plus petite */
+  .gif-result {
+    max-width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  /* Loader encore plus petit */
+  .cssload-main * {
+    font-size: 38px;
+  }
+
+  /* Ajuster la position du loader */
+  .cssload-main {
+    top: 20%;
+    margin: 150px auto 0 auto;
+  }
+}
+
+/* Très petits écrans (moins de 360px) */
+@media (max-width: 360px) {
+  /* Question minimale */
+  .question {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Vidéo minimale */
+  .local-gif {
+    max-width: 150px;
+    margin: 0 auto 1rem auto;
+  }
+
+  /* Boutons très compacts */
+  .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Résultat minimale */
+  .result-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .gif-result {
+    max-width: 150px;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Loader minimal */
+  .cssload-main * {
+    font-size: 30px;
   }
 }

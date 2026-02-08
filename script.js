@@ -19,6 +19,21 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.top = `${newY}px`;
 });
 
+// Événement : Lorsqu'on touche le bouton "Non" sur mobile, il se déplace aléatoirement
+noBtn.addEventListener("touchstart", (e) => {
+  // Empêcher le comportement par défaut du toucher
+  e.preventDefault();
+  // Générer une position X aléatoire dans la largeur du conteneur
+  const newX = Math.floor(Math.random() * questionContainer.offsetWidth);
+  // Générer une position Y aléatoire dans la hauteur du conteneur
+  const newY = Math.floor(Math.random() * questionContainer.offsetHeight);
+
+  // Appliquer la nouvelle position X au bouton
+  noBtn.style.left = `${newX}px`;
+  // Appliquer la nouvelle position Y au bouton
+  noBtn.style.top = `${newY}px`;
+});
+
 // Événement : Lorsque l'utilisateur clique sur le bouton "Oui"
 yesBtn.addEventListener("click", () => {
   // Masquer le conteneur de la question

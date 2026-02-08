@@ -34,6 +34,12 @@ noBtn.addEventListener("touchstart", (e) => {
   noBtn.style.top = `${newY}px`;
 });
 
+  // Événement : Lorsqu'on clique sur le bouton "Non", il disparait
+  noBtn.addEventListener("click", () => {
+    // Masquer le bouton "Non"
+    noBtn.style.display = "none";
+  });
+
 // Événement : Lorsque l'utilisateur clique sur le bouton "Oui"
 yesBtn.addEventListener("click", () => {
   // Masquer le conteneur de la question
